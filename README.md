@@ -4,14 +4,8 @@ This repository contains code for a breast cancer prediction project developed d
 
 Model Performance
 The following table displays the performance metrics of different machine learning models:
+https://github.com/01Vishwa/CVIP-DS-Breast-Cancer-Predection/assets/95125690/e203a40a-9a2d-4794-927e-003b4944a19d
 
-Model	Accuracy	Precision	Confusion Matrix
-Logistic Regression	0.940246	0.940109	[[342, 15], [19, 193]]
-KNN	0.954306	0.954887	[[351, 6], [20, 192]]
-Decision Tree	1.000000	1.000000	[[357, 0], [0, 212]]
-Random Forest	1.000000	1.000000	[[357, 0], [0, 212]]
-Naive Bayes	0.903339	0.903511	[[339, 18], [37, 175]]
-XGBoost	1.000000	1.000000	[[357, 0], [0, 212]]
 For the final implementation, XGBoost was chosen as the algorithm for breast cancer prediction due to its high accuracy and performance.
 
 Flask UI for Breast Cancer Prediction
@@ -24,3 +18,10 @@ Install the required dependencies using pip install -r requirements.txt.
 Run the Flask app using python app.py.
 Access the application via the provided URL.
 Feel free to explore and contribute to this breast cancer prediction project!
+
+1. Sample Output:
+![Screenshot 2023-12-22 201331](https://github.com/01Vishwa/CVIP-DS-Breast-Cancer-Predection/assets/95125690/2fcdf9e4-a663-46c6-abfd-5b42bee62937)
+![Screenshot 2023-12-22 204537](https://github.com/01Vishwa/CVIP-DS-Breast-Cancer-Predection/assets/95125690/90af8723-e28b-4f85-8f65-ca2d812c8935)
+![Screenshot 2023-12-22 205126](https://github.com/01Vishwa/CVIP-DS-Breast-Cancer-Predection/assets/95125690/4c580cae-e31e-4584-a193-4fd2e7e525ae)
+
+ 
