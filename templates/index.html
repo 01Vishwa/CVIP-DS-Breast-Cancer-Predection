@@ -1,1 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breast Cancer Prediction</title>
+
+    <style>
+        body {
+            font-family: 'Google Sans', sans-serif;
+            font-weight: bold;
+            margin: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('https://images.unsplash.com/photo-1535469420027-517674dad7a1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            background-size: cover; /* Adjust the background size */
+            background-position: center; /* Center the background */
+        }
+        h1 {
+            color: blue;
+            font-size: 40px;
+            text-align: center;
+            font-weight: bold;
+            border-top: 3px solid #007bff;
+            border-bottom: 3px solid #007bff;
+            border-left: 0;
+            border-right: 0;
+            border-radius: 10px;
+            padding: 10px;
+            position: absolute;
+            top: 0.5px; /* Adjust the distance from the top */
+            left: 50%;
+            transform: translateX(-50%);
+            box-sizing: border-box;
+        }
+        
+         form {
+            font-family: 'Google Sans', sans-serif;
+            font-weight: bold;
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            animation: fadeInUp 0.5s ease-out;
+            max-width: 700px;
+            width: 90%;
+            box-sizing: border-box;
+            margin: 15px auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .form-column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        input {
+            width: calc(100% - 16px); /* Adjust input width */
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        h2 {
+            color: #007bff;
+            margin-top: 20px;
+        }
+
+        p {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Breast Cancer Prediction</h1>
+    <form method="post" action="/predict">
+        <div class="form-column">
+            <label for="radius_mean">Radius Mean:</label>
+            <input type="number" name="radius_mean" required>
+
+            <label for="texture_mean">Texture Mean:</label>
+            <input type="number" name="texture_mean" required>
+
+            <label for="smoothness_mean">Smoothness Mean:</label>
+            <input type="number" name="smoothness_mean" required>
+
+            <label for="compactness_mean">Compactness Mean:</label>
+            <input type="number" name="compactness_mean" required>
+
+            <label for="symmetry_mean">Symmetry Mean:</label>
+            <input type="number" name="symmetry_mean" required>
+
+            <label for="fractal_dimension_mean">Fractal Dimension Mean:</label>
+            <input type="number" name="fractal_dimension_mean" required>
+        </div>
+
+        <div class="form-column">
+            <label for="radius_se">Radius SE:</label>
+            <input type="number" name="radius_se" required>
+
+            <label for="texture_se">Texture SE:</label>
+            <input type="number" name="texture_se" required>
+
+            <label for="smoothness_se">Smoothness SE:</label>
+            <input type="number" name="smoothness_se" required>
+
+            <label for="compactness_se">Compactness SE:</label>
+            <input type="number" name="compactness_se" required>
+
+            <label for="symmetry_se">Symmetry SE:</label>
+            <input type="number" name="symmetry_se" required>
+
+            <label for="fractal_dimension_se">Fractal Dimension SE:</label>
+            <input type="number" name="fractal_dimension_se" required>
+        </div>
+
+        <button type="submit">Predict</button>
+    </form>
+    {% if prediction %}
+        <h2>Prediction Result:</h2>
+        <p>{{ prediction }}</p>
+    {% endif %}
+</body>
+</html>
 
