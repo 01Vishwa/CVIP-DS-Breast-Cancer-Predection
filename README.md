@@ -1,4 +1,4 @@
-# CVIP-DS-Breast-Cancer-Predection
+# CVIP-DS-Breast-Cancer-Prediction
 Breast Cancer Prediction Project
 This repository contains code for a breast cancer prediction project developed during the internship at Coder's Cave. The project utilizes various machine learning algorithms and achieves high accuracy in predicting breast cancer.
 
